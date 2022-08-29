@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>palindrome</title>
+</head>
+
+<body>
+    <script>
+        function palindrome(n) {
+            let newString = "";
+            for (var i = n.length - 1; i >= 0; i--) {
+                newString = newString + n[i];
+            }
+            return newString;
+        }
+        console.log(palindrome("madam"));
+        var a = palindrome("madam");
+            let n1 = "madam";
+            if (n1 == a) {
+                console.log(n1  + " "+ a + " are palindrome");
+            }
+            else {
+                console.log(n1 + " " + a + " are not palindrome");
+            }
+    </script>
+</body>
+
+</html>
