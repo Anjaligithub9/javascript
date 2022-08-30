@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Distinct array</title>
+</head>
+<body>
+    <script>
+    function  distinctArr(arr, n){
+    for (let i=0; i<n; i++)
+    {
+        var j;
+        for (j=0; j<i; j++)
+           if (arr[i] == arr[j])
+               break;
+   
+        if (i == j)
+          console.log(arr[i] + " ");
+    }
+}
+   
+    arr = new Array(2,6,3,3,8,2,100,3,8,5,2,1,21,1,4,6);
+    n = arr.length;
+    distinctArr(arr, n);
+</script>
+</body>
+</html>
