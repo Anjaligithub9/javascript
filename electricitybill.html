@@ -10,22 +10,22 @@
 <body>
     <script>
         function electricityBill(unit,rupee){
-            if(unit == 50){
+            if(unit <= 50){
             return  unit * 3.50;
             }
             else if(unit > 50 && unit <= 150){
-            return unit * 4.00;
+            return (unit -50) * 4.00 + 50 * 3.50;
             }
             if(unit > 150 && unit <= 250){     
-            return unit * 5.20;
+            return (unit-150)* 5.20 + 100 *4.00 + 50 * 3.50;
             } 
             if(unit > 250){
             return unit * 6.50;
             }
         }
-        console.log(electricityBill(50));
-        console.log(electricityBill(150));
-        console.log(electricityBill(250));
+        console.log(electricityBill(45));
+        console.log(electricityBill(132));
+        console.log(electricityBill(213));
         console.log(electricityBill(300));
     </script>
 </body>
