@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>List</title>
+</head>
+O
+
+<body>
+    <h1><i>To Do</i></h1>
+    <textarea rows="10" cols="30" id="input"></textarea>
+    <button onclick="tasks.value()">Add</button>
+    <ul id="js-items-list"></ul>
+
+    <script>
+        let tasks = {
+            items: [],
+            value: function () {
+                var description = document.getElementById("input").value.trim();
+
+                if (description === "") {
+                    alert("Please enter value");
+                    return;
+                }
+
+                this.items.push({
+                    id: Date.now(),
+                    description: description,
+                    is_deleted: false
+                });
+
+                this.render();
+            },
+            render: function () {
+                let li = '';
+
+                this.items.forEach(function (item) {
+                    if (item.is_deleted) {
+                        li += `<li><strike style='color:red'> ${item.description} </strike></li>`;
+                    } else {
+                        li += `<li>${item.description}<a href="#" data-id=${item.id} id="js-delete-item">Delete</a></li>`;
+                    }
+                })
+
+                document.getElementById("js-items-list").innerHTML = li;
+            },
+            delete: function (id) {
+                let index = this.items.findIndex((item) => item.id === Number(id));
+
+                if (index >= 0) {
+                    this.items[index].is_deleted = true;
+                    this.render();
+
+                    return;
+                }
+
+                alert('Task not found');
+            },
+            moveUp: function (index) {
+                if (!index) {
+                    return;
+                }
+
+                let task = this.items[index] || null;
+
+
+                let previous = this.items[index - 1];
+                this.items[index - 1] = task;
+
+                this.items[index] = previous;
+
+                this.render();
+            },
+            moveDown: function (index) {
+                let movedown = this.items[index] || null;
+
+                let forward = this.items[index + 1];
+                this.items[index + 1] = movedown;
+
+                this.items[index] = forward;
+                this.render();
+            }
+        }
+        document.addEventListener('click', function (e) {
+            if (e.target && e.target.id == 'js-delete-item') {
+                tasks.delete(e.target.dataset.id);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
