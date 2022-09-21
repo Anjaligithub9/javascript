@@ -1,0 +1,343 @@
+.header {
+    margin: -8px;
+    padding-top: 0px;
+    background-color: black;
+    height: 55px;
+}
+
+.locationSvg {
+    width: 10px;
+}
+
+#navBar {
+    align-items: center;
+    justify-content: center;
+}
+
+#navBar input[type=text] {
+    margin-left: 10px;
+    margin-top: 7px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+}
+
+#navBar>button {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    color: white;
+    margin-top: 10px;
+    float: right;
+    margin-right: 140px;
+    background-color: transparent;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.select {
+    margin-left: 400px;
+    background-color: #0052cc;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.details {
+    width: 50%;
+    float: right;
+    padding-right: 125px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.div {
+    float: right;
+    padding-bottom: 980px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.productDetails>p {
+    float: right;
+}
+
+#descriptionDetail {
+    font-size: 18px;
+}
+
+#price {
+    font-size: 20px;
+}
+
+#phoneOfcolor {
+    border: white;
+    border-radius: 50%;
+    margin: 4px 2px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.grey {
+    background-color: rgb(130, 130, 130);
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+    padding: 10px 10px;
+    border-radius: 50%;
+
+}
+
+.green {
+    background-color: rgb(1, 60, 1);
+    padding: 10px 10px;
+    border-radius: 50%;
+
+}
+
+.skywhite {
+    background-color: rgb(217, 214, 214);
+    padding: 10px 10px;
+    border-radius: 50%;
+}
+
+
+.counter {
+    width: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter input {
+    width: 50px;
+    border: 0;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    background: transparent;
+    color: black;
+    appearance: none;
+    outline: 0;
+}
+
+.counter .up .down {
+    display: block;
+    font-size: 22px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: #0052cc;
+    user-select: none;
+}
+
+.deliveryTypes {
+    display: block;
+    
+}
+
+#deliveryTypeButton {
+    cursor: pointer;
+    width: 30%;
+    padding: 10px 12px;
+    margin-left: 5px;
+    border: 1px solid rgb(211, 209, 209);
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+button#deliveryTypeButton{
+    margin-top: 0px;
+    margin-left: -300px;
+    /* margin-bottom: 15px; */
+}
+
+#lightShade {
+    color: gray;
+    padding-right: 10px;
+}
+
+u {
+    text-decoration: underline;
+    margin-top: 9px;
+    margin-left: -210px;
+}
+
+#quantitySize {
+    margin-top: 35px;
+    border: none;
+    width: 100px;
+    height: 33px;
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid rgb(243, 237, 237);
+}
+
+small#lightShade.deliveryTypes {
+    margin-top: 650px;
+    margin-left: -470px;
+    margin-bottom: 10px;
+}
+
+small.span {
+    margin-top: 120px;
+}
+
+#buyAttri {
+    padding: 10px;
+    margin-top: 70px;
+    width: 25%;
+    border: none;
+    font-size: 13px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(52, 126, 251);
+}
+
+#offerAttri {
+    padding: 10px 80px;
+    margin-top: 70px;
+    margin-left: 5px;
+    border: none;
+    font-size: 13px;
+    border-radius: 5px;
+    color: white;
+    background-color: orange;
+}
+
+.block {
+    display: block;
+}
+
+
+#dialogBox {
+    margin-top: 15px;
+    border: 1px solid black;
+    padding-left: 25px;
+    border-radius: 18px;
+    border-color: black;
+}
+
+.dialogBox {
+    visibility: hidden;
+}
+
+span.block {
+    margin-top: 100px;
+    margin-left: -200px;
+}
+
+.grid {
+    float: left;
+    display: flex;
+    padding-left: 125;
+    grid-gap: 15px;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    width: 50%;
+    display: contents;
+    vertical-align: top;
+}
+
+.grid img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-top: 30px;
+    padding-left: 100px;
+    float: left;
+    flex: left;
+    width: 100px;
+    height: 100px;
+}
+
+.large {
+    width: 500px;
+    height: 580px;
+}
+
+span {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: white;
+    border-radius: 50%;
+    margin: 4px 2px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+}
+
+.decrease {
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+    background-color: burlywood;
+    margin-top: 32px;
+    padding: 0px 15px;
+}
+
+.increase {
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    background-color: burlywood;
+    margin-top: 30px;
+    padding: 0px 14px;
+}
+
+.p {
+    text-align: center;
+    background-color: rgb(246, 242, 242);
+}
+
+.image {
+    float: left;
+    width: 50%;
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.imageGrid {
+    padding-top: 28px;
+    width: 50%;
+    padding-left: 150;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid>img {
+    padding-top: 30px;
+    padding-left: 150px;
+    float: left;
+    width: 100;
+    height: 100;
+    object-fit: cover;
+}
+
+.large {
+    float: right;
+    padding-top: 12px;
+    padding-left: 150px;
+    width: 405px;
+    height: 500px;
+}
