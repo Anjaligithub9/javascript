@@ -35,8 +35,7 @@ header.append(dropDown, search, sellingNowButton);
 document.body.appendChild(header);
 header.classList.add(`header`);
 
-//IMAGEES
-
+//IMAGES
 let image = document.createElement("section");
 image.classList.add("image");
 
@@ -65,9 +64,7 @@ span.append(largeImg);
 image.append(grid, span);
 document.body.append(image);
 
-
 // HEADING AND LOCATION
-
 let details = document.createElement("div");
 details.classList.add("details");
 
@@ -172,7 +169,6 @@ color.append(phoneOfColor);
 productDetails.append(descriptionDetail, price, color, colorButton);
 
 //DELIVERY BUTTONS
-
 let deliveryBtn = document.createElement(`div`);
 
 const delivery = document.createElement(`small`);
@@ -187,7 +183,6 @@ storePickup.setAttribute(`id`, `deliveryTypeButton`);
 const deliverys = document.createElement(`button`);
 deliverys.innerHTML = `Delivery`;
 deliverys.setAttribute(`id`, `deliveryTypeButton`);
-
 
 div.append(delivery, storePickup, deliverys);
 
@@ -225,7 +220,6 @@ number.setAttribute("id", "quantitySize");
 quantity.append(quantitys, decrease, number, increase);
 
 //DELIVERY CHARGES AND SHIPPING TIME
-
 const shippingFee = document.createElement(`span`);
 
 const shipping = document.createElement(`small`);
@@ -243,14 +237,14 @@ const buyBtn = document.createElement(`div`);
 const buy = document.createElement(`button`);
 buy.innerHTML = `Buy Now`;
 
-buy.addEventListener('click', () => {
+buy.addEventListener("click", () => {
   if (buyAttri.innerHTML == "Buy Now") {
     buy.addEventListener("click", (event) => {
       event.target.innerHTML = "Buy Now";
-      event.target.style.backgroundColor = 'green';
+      event.target.style.backgroundColor = "green";
     });
   }
-})
+});
 
 //MAKE AN OFFER BUTTON
 const offer = document.createElement(`button`);
@@ -262,11 +256,10 @@ buyBtn.append(buy, offer);
 div.append(buyBtn);
 
 offer.addEventListener("click", () => {
-  dialogBox.classList.toggle('dialogBox');
+  dialogBox.classList.toggle("dialogBox");
 });
 
 //DIALOG BOX CONTENT
-
 const box = document.createElement("span");
 box.classList.add("block");
 const dialogBox = document.createElement("div");
@@ -328,7 +321,7 @@ box.append(
   online,
   payInPerson,
   submitOffer
-); 
+);
 
 productDetails.append(quantity, shippingFee, buyBtn, dialogBox);
 details.append(productDetails);
