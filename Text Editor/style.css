@@ -1,0 +1,52 @@
+#container {
+    margin: 5%;
+}
+
+
+#container h1 {
+    text-align: center;
+    color: rgb(163, 111, 189);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+
+#container hr {
+    height: .5px;
+    width: 200%;
+    margin-left: -10%;
+    color: #999;
+}
+
+
+#sectionBtn {
+    text-align: center;
+}
+
+
+#sectionBtn button {
+    margin: 8px 6px;
+    border-color: #999;
+    background-color: white;
+}
+
+
+#sectionBtn button:hover {
+    background-color: burlywood;
+}
+
+
+#sectionBtn button img {
+    height: 12px;
+}
+
+
+#sectionTextArea textarea {
+    padding: 10px;
+    max-width: 100%;
+    margin-left: 15%;
+    line-height: 1;
+    border-radius: 5px;
+    border: 2px solid rgb(163, 111, 189);
+    box-shadow: 1px 1px 1px #999
+}
