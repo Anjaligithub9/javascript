@@ -7,7 +7,6 @@ div.id = "container";
 const heading = document.createElement("h1");
 heading.textContent = "TEXT EDITOR";
 
-
 //HR TAG
 const line = document.createElement("hr");
 
@@ -16,100 +15,117 @@ const line = document.createElement("hr");
 const sectionBtn = document.createElement("section");
 sectionBtn.id = "sectionBtn";
 
-
 //BOLD BTN
 const btnBold = document.createElement("button");
 btnBold.textContent = "Bold";
-btnBold.onclick = function bold() {
-  textarea.style.fontWeight = "bold";
-  return;
-};
-btnBold.addEventListener("dblclick", () => {
-  textarea.style.fontWeight = "";
-});
-
 
 //ITALIC BTN
 const btnItalic = document.createElement("button");
 btnItalic.textContent = "Italic";
-btnItalic.onclick = function italic() {
-  textarea.style.fontStyle = "italic";
-};
-btnItalic.addEventListener("dblclick", () => {
-  textarea.style.fontStyle = "";
-});
-
 
 //LEFT ALIGN BTN
 const leftAlign = document.createElement("button");
 leftAlign.innerHTML = "<img src = leftalign.png>";
-leftAlign.onclick = function alignTextLeft() {
-  textarea.style.textAlign = "left";
-};
-leftAlign.addEventListener("dblclick", () => {
-  textarea.style.textAlign = "";
-});
-
 
 //CENTER ALIGN BTN
 const centerAlign = document.createElement("button");
 centerAlign.innerHTML = "<img src = aligncenter.png>";
-centerAlign.onclick = function alignTextCenter() {
-  textarea.style.textAlign = "center";
-};
-centerAlign.addEventListener("dblclick", () => {
-  textarea.style.textAlign = "";
-});
-
 
 //RIGTH ALIGN BTN
 const rigthAlign = document.createElement("button");
 rigthAlign.innerHTML = "<img src = alignright.png>";
-rigthAlign.onclick = function alignTextRight() {
-  textarea.style.textAlign = "right";
-};
-rigthAlign.addEventListener("dblclick", () => {
-  textarea.style.textAlign = "";
-});
-
 
 //UPPERCASE BTN
 const btnUpperCase = document.createElement("button");
 btnUpperCase.textContent = "Upper Case";
-btnUpperCase.onclick = function upperCase() {
-  textarea.style.textTransform = "uppercase";
-};
-btnUpperCase.addEventListener("dblclick", () => {
-  textarea.style.textTransform = "";
-});
-
 
 //LOWERCASE BTN
 const btnLowerCase = document.createElement("button");
 btnLowerCase.textContent = "Lower Case";
-btnLowerCase.onclick = function lowerCase() {
-  textarea.style.textTransform = "lowercase";
-};
-btnLowerCase.addEventListener("dblclick", () => {
-  textarea.style.textTransform = "";
-});
-
 
 //CAPITALIZE BTN
 const btnCapitalize = document.createElement("button");
 btnCapitalize.textContent = "Capitalize";
-btnCapitalize.onclick = function capitalize() {
-  textarea.style.textTransform = "capitalize";
-};
-btnCapitalize.addEventListener("dblclick", () => {
-  textarea.style.textTransform = "";
-});
-
 
 //CLEARTEXT BTN
 const btnClearText = document.createElement("button");
 btnClearText.textContent = "Clear Text";
-btnClearText.onclick = clearText;
+
+//SECTION TEXTAREA
+const sectionTextArea = document.createElement("section");
+sectionTextArea.id = "sectionTextArea";
+const textarea = document.createElement("textarea");
+sectionTextArea.append(textarea);
+
+
+//FUNCTIONS
+
+//BOLD
+function bold() {
+  if (textarea.style.fontWeight === "bold") {
+    textarea.style.fontWeight = "";
+  } else {
+    textarea.style.fontWeight = "bold";
+  }
+  console.log();
+}
+
+//ITALIC 
+function italic() {
+  if(textarea.style.fontStyle === "italic"){
+    textarea.style.fontStyle = "";
+  }
+  else{
+    textarea.style.fontStyle = "italic"
+  }
+}
+
+//LEFT ALIGN
+function alignTextLeft() {
+  textarea.style.textAlign = "left";
+}
+
+//CENTER ALIGN 
+function alignTextCenter() {
+  textarea.style.textAlign = "center";
+}
+
+//RIGTH ALIGN
+function alignTextRight() {
+  textarea.style.textAlign = "right";
+}
+
+//UPPERCASE
+function upperCase() {
+  if(textarea.style.textTransform === "uppercase"){
+    textarea.style.textTransform = "";
+  }
+  else{
+    textarea.style.textTransform = "uppercase";
+  }
+}
+
+//LOWERCASE
+function lowerCase() {
+  if( textarea.style.textTransform === "lowercase"){
+    textarea.style.textTransform = "";
+  }
+  else{
+    textarea.style.textTransform = "lowercase";
+  }
+}
+
+//CAPITALIZE
+function capitalize() {
+  if(textarea.style.textTransform === "capitalize"){
+    textarea.style.textTransform = "";
+  }
+  else{
+    textarea.style.textTransform = "capitalize";
+  }
+}
+
+//CLEARTEXT
 function clearText() {
   textarea.value = "";
   textarea.style.fontStyle = "";
@@ -117,8 +133,19 @@ function clearText() {
   textarea.style.textTransform = "";
 }
 
+//EVENT BINDING
+btnBold.addEventListener("click", bold);
+btnItalic.addEventListener("click", italic);
+leftAlign.addEventListener("click", alignTextLeft);
+centerAlign.addEventListener("click", alignTextCenter);
+rigthAlign.addEventListener("click", alignTextRight);
+btnUpperCase.addEventListener("click", upperCase);
+btnLowerCase.addEventListener("click", lowerCase);
+btnCapitalize.addEventListener("click", capitalize);
+btnClearText.addEventListener("click", clearText);
 
-//APPENDING SECTION BTN ELEMENTS
+
+//APPENDING
 sectionBtn.append(
   heading,
   line,
@@ -133,14 +160,5 @@ sectionBtn.append(
   btnClearText
 );
 
-
-//SECTION TEXTAREA
-const sectionTextArea = document.createElement("section");
-sectionTextArea.id = "sectionTextArea";
-const textarea = document.createElement("textarea");
-sectionTextArea.append(textarea);
-
-
-//APPENDING DIV AND BODY ELEMENTS
 div.append(sectionBtn, sectionTextArea);
 document.body.appendChild(div);
